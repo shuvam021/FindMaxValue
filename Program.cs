@@ -7,25 +7,17 @@ internal class Program
     public static void Main()
     {
         Console.WriteLine("Max Int Value:");
-        //test 1 :
-        Console.WriteLine(FindMax.FindMaxIntValue(99, 9, 0));
-        //test 2 :
-        Console.WriteLine(FindMax.FindMaxIntValue(0, 99, 9));
-        //test 3 :
-        Console.WriteLine(FindMax.FindMaxIntValue(9, 0, 99));
-
-        //test 1 :
-        Console.WriteLine(FindMax.FindMaxFloatValue(99.9F, 9.9F, 0.9F));
-        //test 2 :
-        Console.WriteLine(FindMax.FindMaxFloatValue(9.9F, 99.9F, 0.9F));
-        //test 3 :
-        Console.WriteLine(FindMax.FindMaxFloatValue(9.9F, 0.9F, 99.9F));
-
-        //test 1:
-        Console.WriteLine(FindMax.FindMaxStringValue("where", "how", "when"));
-        //test 2:
-        Console.WriteLine(FindMax.FindMaxStringValue("when", "where", "how"));
-        //test 3:
-        Console.WriteLine(FindMax.FindMaxStringValue("when", "how", "where"));
+        Console.WriteLine("\nIntegers:");
+        Console.WriteLine(new FindMax<int>(99, 9, 0).FindMaxValue()); //test 1
+        Console.WriteLine(new FindMax<int>(0, 99, 9).FindMaxValue()); //test 2
+        Console.WriteLine(new FindMax<int>(9, 0, 99).FindMaxValue()); //test 3
+        Console.WriteLine("\nFloats:");
+        Console.WriteLine(new FindMax<float>(99.9f, 9.9f, 0.9f).FindMaxValue()); //test 1 :
+        Console.WriteLine(new FindMax<float>(9.9f, 99.9f, 0.9f).FindMaxValue()); //test 2 :
+        Console.WriteLine(new FindMax<float>(9.9f, 0.9f, 99.9f).FindMaxValue()); //test 3 :
+        Console.WriteLine("\nStrings:");
+        Console.WriteLine(new FindMax<string>("where", "how", "when").FindMaxValue()); //test 1:
+        Console.WriteLine(new FindMax<string>("when", "where", "how").FindMaxValue()); //test 2:
+        Console.WriteLine(new FindMax<string>("when", "how", "where").FindMaxValue()); //test 3:
     }
 }

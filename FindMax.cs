@@ -6,65 +6,21 @@ using System.Threading.Tasks;
 
 namespace FindMaximum;
 
-internal class FindMax
+internal class FindMax<T> where T: IComparable
 {
-    public static int FindMaxIntValue(int first, int second, int third)
-    {
-        if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-        {
-            return first;
-        }
-        else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-        {
-            return second;
-        }
-        else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
-        {
-            return third;
-        }
-        else
-        {
-            return 0;
-        }
-    }
-    public static float FindMaxFloatValue(float first, float second, float third)
-    {
-        if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-        {
-            return first;
-        }
-        else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-        {
-            return second;
-        }
-        else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
-        {
-            return third;
-        }
-        else
-        {
-            return 0;
-        }
-    }
+    public T first, second, third;
 
-    public static string FindMaxStringValue(string first, string second, string third)
+    public FindMax(T firstValue, T secondValue, T thirdValue)
     {
-        if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-        {
-            return first;
-        }
-        else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-        {
-            return second;
-        }
-        else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
-        {
-            return third;
-        }
-        else
-        {
-            Console.WriteLine($"{second} or {third} values having same value");
-            return null;
-        }
+        this.first = firstValue;
+        this.second = secondValue;
+        this.third = thirdValue;
+    }
+    public T FindMaxValue()
+    {
+        if (this.first.CompareTo(this.second) > 0 && first.CompareTo(this.third) > 0) return this.first;
+        else if (this.second.CompareTo(this.first) > 0 && this.second.CompareTo(this.third) > 0) return this.second;
+        else if (third.CompareTo(this.first) > 0 && third.CompareTo(this.second) > 0) return this.third;
+        else return default;
     }
 }

@@ -20,5 +20,12 @@ internal class Program
         Console.WriteLine(FindMax.FindMaxFloatValue(9.9F, 99.9F, 0.9F));
         //test 3 :
         Console.WriteLine(FindMax.FindMaxFloatValue(9.9F, 0.9F, 99.9F));
+
+        //test 1:
+        Console.WriteLine(FindMax.FindMaxStringValue("where", "how", "when"));
+        //test 2:
+        Console.WriteLine(FindMax.FindMaxStringValue("when", "where", "how"));
+        //test 3:
+        Console.WriteLine(FindMax.FindMaxStringValue("when", "how", "where"));
     }
 }

@@ -11,7 +11,14 @@ internal class Program
         Console.WriteLine(FindMax.FindMaxIntValue(99, 9, 0));
         //test 2 :
         Console.WriteLine(FindMax.FindMaxIntValue(0, 99, 9));
-        //test 2 :
+        //test 3 :
         Console.WriteLine(FindMax.FindMaxIntValue(9, 0, 99));
+
+        //test 1 :
+        Console.WriteLine(FindMax.FindMaxFloatValue(99.9F, 9.9F, 0.9F));
+        //test 2 :
+        Console.WriteLine(FindMax.FindMaxFloatValue(9.9F, 99.9F, 0.9F));
+        //test 3 :
+        Console.WriteLine(FindMax.FindMaxFloatValue(9.9F, 0.9F, 99.9F));
     }
 }
